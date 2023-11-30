@@ -1,0 +1,16 @@
+schema: '2.0'
+stages:
+  train:
+    cmd: python train.py
+    deps:
+    - path: train.py
+      hash: md5
+      md5: dbc13d1cff049ac6c5a0801c907969a8
+      size: 1204
+    params:
+      params.yaml:
+        train:
+          epochs: 15
+          lr: 0.05
+          batch_size: 256
+          random_seed: 21
