@@ -7,8 +7,6 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Train model
-        env:
-          REPO_TOKEN: ${{ secrets.deeplearning }}
         run: |
           python deploy.py  # generate plot.png
 
