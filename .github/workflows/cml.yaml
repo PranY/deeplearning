@@ -20,8 +20,6 @@ jobs:
           REPO_TOKEN: ${{ secrets.PERSONAL_ACCESS_TOKEN }}
         run: |
           echo "## Metrics: workflow vs. master" >> report.md
-          git fetch --depth=1 origin master:master
-
           dvc metrics diff master --show-md >> report.md
           echo "## Plots" >> report.md
           echo "### Class confusions" >> report.md
